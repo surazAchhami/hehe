@@ -70,11 +70,7 @@
     font-size: 14px;
     font-weight: bold;
   }
-  #scareVideo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+
 
   .dialog-body {
     padding: 20px;
@@ -94,16 +90,17 @@
     cursor: pointer;
   }
 
-  #scareVideo {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 999;
-  }
+#scareVideo {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   /* changed from cover */
+  z-index: 999;
+  background-color: black;  /* fills empty space if video doesn't match screen shape */
+}
 </style>
 </head>
 <body>
