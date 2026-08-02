@@ -70,6 +70,11 @@
     font-size: 14px;
     font-weight: bold;
   }
+  #scareVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
   .dialog-body {
     padding: 20px;
@@ -128,15 +133,15 @@ const noBtn = document.getElementById("noBtn");
 const video = document.getElementById("scareVideo");
 
 function scare(){
-  dialogBox.style.display = "none";        // hide the dialog
-  loadingScreen.style.display = "flex";     // show the loading screen
+  dialogBox.style.display = "none";        
+  loadingScreen.style.display = "flex";     
 
   setTimeout(function(){
   loadingScreen.style.display = "none";
   video.style.display = "block";
   video.currentTime = 0;
   video.play();
-}, 4000);                                  // wait 2 seconds before scaring
+}, 4000);                                 
 }                                                                    
 
 
